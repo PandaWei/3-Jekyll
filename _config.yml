@@ -1,11 +1,19 @@
 # Site settings
-title: PersonalBlog
+title: Wei Jiangang's Blog
 email: weijg.fnst@cn.fujitsu.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here.
-  You can edit this line in _config.yml.
-  It will appear in your document head meta (for Google search results)
-  and in your feed.xml site description.
+  I'm a software engineer of fujitsu,
+  and also a devotee and contributor for opensource.
+  working on virtualization, autotest, kernel, etc.
+
+  This's my personal tech-blog,
+  But might post my attitude and feelings towards life. ^_^
+
+  If you have any other inquires, questions, comments, ideas, etc, 
+  feel free to contact me and I will do my best to respond.
+
+  The website cloned from 3-Jekyll theme, licensed under CC BY-NC-SA.
+  All rights for blog articles reserved.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://pandawei.github.io" # the base hostname & protocol for your site
 
