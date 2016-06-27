@@ -5,14 +5,15 @@ date:   2016-05-01 12:59:00
 categories: Jekell Kernel Virtualization
 tags: Kernel Virtualization
 ---
-Steps:
-1. creates a configuration based on the defaults for your architecture
+###Steps:
+
+- creates a configuration based on the defaults for your architecture
 
 ```sh
 # make defconfig
 ```
 
-2. define extra configuration if required. 
+- define extra configuration if required. 
 
 ```sh
 # vim .config
@@ -20,7 +21,7 @@ or
 # make menuconfig  --> help to add some latest configuration
 ```
 
-3. enable debug info option
+- enable debug info option
 
 Kernel debugging->Compile the kernel with debug info"
 
@@ -31,13 +32,13 @@ Kernel debugging->Compile the kernel with debug info"
     [*] KGDB: Console messages through gdb
 ```
 
-4. compile kernel
+- compile kernel
 
 ```sh
 # make -j<n>
 ```
 
-5. confirm the result of compile
+- confirm the result of compile
 
 ```sh
 [root@localhost linux-debug]# pwd
@@ -46,17 +47,17 @@ Kernel debugging->Compile the kernel with debug info"
 -rw-r--r-- 1 root root 6414240 Jun 17 17:10 arch/x86/boot/bzImage
 ```
 
-6. start qemu with the compiled kernel
+- start qemu with the compiled kernel
 
 ```sh
 #qemu-system-x86_64 -s -S -kernel /mnt/extra_disk/osc/linux-debug/arch/x86/boot/bzImage -hda linux-0.2.img -append "root=/dev/sda console=ttyS0" -m 512M
 ```
 
 Note:
-- '-s' option makes Qemu listen on port tcp::1234
-- '-S' option makes Qemu stop execution until you give the continue command
+-s option makes Qemu listen on port tcp::1234
+-S option makes Qemu stop execution until you give the continue command
 
-7. start gdb in another terminal
+- start gdb in another terminal
 
 ```sh
 # gdb /mnt/extra_disk/osc/linux-debug/arch/x86/boot/vmlinux
@@ -69,7 +70,7 @@ Breakpoint 1 at 0xffffffff81f42c00
 (gdb) list   --> browse the current line's codes
 ```
 
-8. Q&A
+- Q&A
  Maybe you'll met "gdb - Remote 'g' packet reply is too long",
  Please update gdb from source codes and comment the statments in 'gdb/remote.c' like below,
 
