@@ -2,7 +2,7 @@
 layout: post
 title:  "Enable serial console!"
 date:   2016-06-01 12:59:00
-categories: Kernel Jekyll
+categories: Kernel Jekyll Virtualization
 tags: Kernel
 ---
 
