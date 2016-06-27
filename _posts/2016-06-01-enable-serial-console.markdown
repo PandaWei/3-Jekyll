@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Enable serial console!"
 date:   2016-06-01 12:59:00
 categories: Jekyll Update Kernel
 tags: Kernel
@@ -20,6 +20,7 @@ Now rebuild the grub.cfg file:
 # grub2-mkconfig -o /boot/grub2/grub.cfg
 
 After rebooting the guest it is possible to access the serial console using the virsh console command.
+If you want to debug host kernel by serial, the setting is the same as above.
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
