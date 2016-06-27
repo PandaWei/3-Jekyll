@@ -5,7 +5,7 @@ date:   2016-05-01 12:59:00
 categories: Jekell Kernel Virtualization
 tags: Kernel Virtualization
 ---
-###Steps:
+### Steps:
 
 - creates a configuration based on the defaults for your architecture
 
@@ -54,8 +54,7 @@ Kernel debugging->Compile the kernel with debug info"
 ```
 
 Note:
--s option makes Qemu listen on port tcp::1234
--S option makes Qemu stop execution until you give the continue command
+-s option makes Qemu listen on port tcp::1234; -S option makes Qemu stop execution until you give the continue command
 
 - start gdb in another terminal
 
