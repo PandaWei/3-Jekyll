@@ -24,6 +24,6 @@ Me: Wei Jiangang
 
 Email:
 <weijg.fnst@cn.fujitsu.com>
-<wei.jiangang@foxmail.com>
+<wei.jiangang@foxmail.com> (personal)
 
 Github: <https://pandawei.github.io/>
