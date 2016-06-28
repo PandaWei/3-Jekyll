@@ -1,5 +1,5 @@
 ---
-: post
+layout: post
 title:  "Remove the old kernel compiled by yourself!"
 date:   2016-04-01 10:30:00
 categories: Kernel
