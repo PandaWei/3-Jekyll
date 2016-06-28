@@ -2,10 +2,10 @@
 layout: post
 title:  "Introduce avocado and avocado-vt"
 date:   2016-01-01 22:30:00
-categories: Autotest
-tags: avocado avocado-vt
+categories: Automatic-Test
+tags: Automatic-Test
 ---
-###Preface
+### Preface
 
 Autotest is a framework for fully automated testing, It is designed primarily to test the Linux kernel, though it is useful for many other
 functions such as qualifying new hardware. It's an open-source project under the GPL and is used and developed by a number of organizations,
@@ -13,12 +13,12 @@ including Google, IBM, Red Hat, Fujitsu, and many others.
 
 and it's also very popular for virtualization test, recommended by Qemu, KVM and Libvirt's official.
 
-- [Recommended-by-QEMU] (http://wiki.qemu.org/Contribute/KVMAutotestInstallfest)
+- [Recommended-by-QEMU](http://wiki.qemu.org/Contribute/KVMAutotestInstallfest)
 - [Recommended-by-KVM](http://www.linux-kvm.org/page/KVM-Autotest)
 
 This is an introducation for it's successor - Avocado.
 
-###Avocado Test Framework
+### Avocado Test Framework
 
 Avocado is a test framework that is built on the experience accumulated with autotest, while improving on its weaknesses and shortcomings.
 
@@ -40,7 +40,7 @@ Avocado-VT is a compatibility plugin that lets you execute virtualization relate
 
 Avocado-VT itself is open source with a [public repository][repo2] on GitHub.
 
-User's Guide and More details about it can be found here[docs](http://avocado-vt.readthedocs.io/):
+User's Guide and More details about it can be found here [docs](http://avocado-vt.readthedocs.io/):
 
 ### Development
 
