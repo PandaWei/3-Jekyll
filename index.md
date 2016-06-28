@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hellokitty say welcome!
+title: welcome, guys!
 ---
 
 
