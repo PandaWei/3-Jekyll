@@ -11,7 +11,7 @@ Autotest is a framework for fully automated testing, It is designed primarily to
 functions such as qualifying new hardware. It's an open-source project under the GPL and is used and developed by a number of organizations,
 including Google, IBM, Red Hat, Fujitsu, and many others.
 
-and it's also very popular for virtualization test, recommended by Qemu, KVM and Libvirt's official.
+and it's also very popular for virtualization test, recommended by Qemu, KVM and Libvirt's official website.
 
 - [Recommended-by-QEMU](http://wiki.qemu.org/Contribute/KVMAutotestInstallfest)
 - [Recommended-by-KVM](http://www.linux-kvm.org/page/KVM-Autotest)
