@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Markdown Sample!"
+title:  "Markdown sample!"
 date:   2015-03-08 22:30:00
 categories: Jekyll
 tags: Jekyll

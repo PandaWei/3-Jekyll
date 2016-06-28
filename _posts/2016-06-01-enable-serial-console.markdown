@@ -20,6 +20,7 @@ GRUB_CMDLINE_LINUX_DEFAULT applies this configuration only to the default menu e
 use GRUB_CMDLINE_LINUX to apply it to all the menu entries.
 
 Now rebuild the grub.cfg file:
+
 ```sh
 # grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
