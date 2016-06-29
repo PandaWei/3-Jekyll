@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Remove the old kernel compiled by yourself!"
+title:  "Remove the old kernel compiled by user!"
 date:   2016-04-01 10:30:00
 categories: Kernel
 tags: Kernel
