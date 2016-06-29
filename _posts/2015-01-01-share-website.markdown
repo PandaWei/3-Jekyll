@@ -8,10 +8,10 @@ tags: BestWeb
 ### Tech Web&Blog
 
 * [kernel-parameters] - list of the kernel parameters in Chinese online!
-* [kvm-virtualization-tech] - Blog for the Book：KVM虚拟化技术：实战与原理解析!
-* [PCIe-Arch] - Blog for PCIe architectrue!
+* [kvm-virtualization-tech] - blog for book "KVM虚拟化技术：实战与原理解析"!
+* [PCIe-Arch] - blog for PCIe architectrue!
 
-APHORISM
+Aphorism
 ----
 
 **Share Knowledge, Share Happy!**
