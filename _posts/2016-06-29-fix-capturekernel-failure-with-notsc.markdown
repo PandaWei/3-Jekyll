@@ -56,7 +56,7 @@ while (ticks == jiffies)
 
 It seems that the jiffies not being increased.
 
-### Two proposals, You can refer to the [RFC](https://lkml.org/lkml/2016/6/14/178):
+### Two proposals, You can refer to the [RFC email](https://lkml.org/lkml/2016/6/14/178) sent by me:
 
 - Take a look at it's caller calibrate_delay(). If I specify 'lpj' value, it can skip the bug.
 
@@ -122,7 +122,7 @@ the lpj value in such cases.
 
 ### The Arch-Criminal
 
-- I found the first bad commit <522e66464467> by bisect, which used to fix erratum AVR31 for "Intel Atom Processor C2000 Product Family Specification Update". You can find the [Doc](http://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/atom-c2000-family-spec-update.pdf).
+- I found the first bad commit <522e66464467> by bisect, which used to fix erratum AVR31 for "Intel Atom Processor C2000 Product Family Specification Update". You can find the [Spec](http://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/atom-c2000-family-spec-update.pdf).
 
 ```sh
 commit 522e66464467543c0d88d023336eec4df03ad40b
