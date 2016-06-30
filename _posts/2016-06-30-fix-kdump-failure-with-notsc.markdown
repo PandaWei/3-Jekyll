@@ -41,7 +41,6 @@ KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory 
 ```sh
 # echo 1 > /proc/sys/kernel/sysrq
 # echo c > /proc/sysrq-trigger
-#
 ```
 
 ### Investigation and Report:
