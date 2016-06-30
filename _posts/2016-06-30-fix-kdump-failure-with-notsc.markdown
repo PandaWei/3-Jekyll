@@ -29,10 +29,12 @@ Note:
 - This bug is found in Kernel Upstream. so we'd better to compile the latest kernel source code. You can refer to my blog [Debug kernel by qemu!](https://pandawei.github.io/kernel/virtualization/2016/05/01/debug-kernel-by-qemu.html) for how to compile.
 - Of course, you must enable the configuration about KDUMP before 'make -j<n>'. You can refer to [Documentation/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
 - specify 'notsc' for capture-kernel in /etc/sysconfig/kdump.
+
 ```sh
 KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off udev.children-max=2 panic=10 rootflags=nofail"
 ```
 - trigger crashdown as following,
+
 ```sh
 # echo 1 > /proc/sys/kernel/sysrq
 # echo c > /proc/sysrq-trigger
@@ -134,7 +136,7 @@ can still come in and disturb the local APIC during shutdown process.
 To quiet external interrupts, disable I/O APIC before shutdown local APIC.
 ```
 
-- It doesn't make sense to me that change the order of disabling between I/O APIC and local APIC just for a certain model C2000. And I couldn't find any related descriptions for Intel 64 and IA-32 Arch. so, I send a [PATCH](https://lkml.org/lkml/2016/6/29/18)
+- It doesn't make sense to me that change the order of disabling between I/O APIC and local APIC just for a certain model C2000. And I couldn't find any related descriptions for Intel 64 and IA-32 Arch. so, I send a [PATCH](https://lkml.org/lkml/2016/6/29/18) to fix it.
 
 
 **Nothing seek, nothing find!**
