@@ -3,16 +3,13 @@ layout: post
 title: welcome, guys!
 ---
 
-
 ```
 __        __   _                            _ 
 \ \      / /__| | ___ ___  _ __ ___   ___  | |
  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | |
   \ V  V /  __/ | (_| (_) | | | | | |  __/ |_|
    \_/\_/ \___|_|\___\___/|_| |_| |_|\___| (_)
- 
------------------------------------------------
-                                \
+                                 \
                                    \
                                        /\_)o<
                                       |      \
@@ -22,7 +19,7 @@ __        __   _                            _
 ```
 Me: Wei Jiangang
 
-Working on Opensource, including Virtualization, AutoTest, Kernel and etc. 
+Working on Opensource, including Virtualization, AutoTest, Kernel and etc.
 
 Email:
 <weijg.fnst@cn.fujitsu.com>
