@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "HowTo add new qmp command"
+title:  "Howto add new qmp command"
 date:   2016-05-02 10:00:00
 categories: Virtualization
 tags: Virtualization
@@ -152,4 +152,4 @@ index 0690347..f94043b 100644
      KvmInfo *info = g_malloc0(sizeof(*info));
 ```
 
-***There's nothing impossible to him who will try !***
+**There's nothing impossible to him who will try !**
