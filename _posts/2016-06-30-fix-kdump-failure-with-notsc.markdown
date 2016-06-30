@@ -29,7 +29,7 @@ serial console log as following,
 Note:
 
 - This bug is found in Kernel Upstream. so we'd better to compile the latest kernel source code. You can refer to my blog [Debug kernel by qemu!](https://pandawei.github.io/kernel/virtualization/2016/05/01/debug-kernel-by-qemu.html) for how to compile.
-- Of course, you must enable the configuration about KDUMP before 'make -j<n>'. You can refer to [Documentation/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
+- Of course, you must enable the configuration about Kdump before `make -j<n>`\. You can refer to [Documentation/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
 - specify 'notsc' for capture-kernel in /etc/sysconfig/kdump.
 
 ```sh
