@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "Fix kdump failure with notsc!"
-date:   2016-06-30 12:00:00
+title:  "kdump failure with notsc!"
+date:   2016-06-30 09:00:00
 categories: Kernel
 tags: Kernel
 ---
-
 ### Kernel Bug:
 
 If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-kernel will be hang at "Calibrating delay loop...". serial console log as following,
