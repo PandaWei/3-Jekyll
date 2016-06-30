@@ -7,7 +7,9 @@ tags: Kernel
 ---
 ### Kernel Bug:
 
-If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-kernel will be hang at `Calibrating delay loop...`. serial console log as following,
+If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-kernel will be hang at `Calibrating delay loop...`\. 
+
+serial console log as following,
 
 ```sh
 ............
@@ -33,6 +35,7 @@ Note:
 ```sh
 KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off udev.children-max=2 panic=10 rootflags=nofail"
 ```
+
 - trigger crashdown as following,
 
 ```sh
@@ -120,7 +123,7 @@ the lpj value in such cases.
 
 ### The Arch-Criminal
 
-- I found the first bad commit <522e66464467> by bisect, which used to fix erratum AVR31 for "Intel Atom Processor C2000 Product Family Specification Update". You can find the doc at http://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/atom-c2000-family-spec-update.pdf.
+- I found the first bad commit <522e66464467> by bisect, which used to fix erratum AVR31 for "Intel Atom Processor C2000 Product Family Specification Update". You can find the [Doc](http://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/atom-c2000-family-spec-update.pdf).
 
 ```sh
 commit 522e66464467543c0d88d023336eec4df03ad40b
