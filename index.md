@@ -22,6 +22,8 @@ __        __   _                            _
 ```
 Me: Wei Jiangang
 
+Working on Opensource, including Virtualization, AutoTest, Kernel and etc. 
+
 Email:
 <weijg.fnst@cn.fujitsu.com>
 <wei.jiangang@foxmail.com> (personal)
