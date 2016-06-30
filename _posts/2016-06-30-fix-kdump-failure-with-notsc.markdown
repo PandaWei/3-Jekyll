@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fix kdump failure with notsc!"
-date:   2016-06-30 09:00:00
+date:   2016-06-29 09:00:00
 categories: Kernel
 tags: Kernel
 ---
@@ -26,7 +26,7 @@ If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-k
 
 Note:
 
-- This bug is found in Kernel Upstream. so we'd better to compile the latest kernel source code. You can refer to my blog "Debug kernel by qemu!" for how to compile.
+- This bug is found in Kernel Upstream. so we'd better to compile the latest kernel source code. You can refer to my blog [Debug kernel by qemu!](https://pandawei.github.io/kernel/virtualization/2016/05/01/debug-kernel-by-qemu.html) for how to compile.
 - Of course, you must enable the configuration about KDUMP before 'make -j<n>'. You can refer to [Documentation/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
 - specify 'notsc' for capture-kernel in /etc/sysconfig/kdump.
 ```sh
