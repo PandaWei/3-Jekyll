@@ -16,9 +16,8 @@ tags: Kernel Virtualization
 - define extra configuration if required. 
 
 ```sh
-# vim .config
-or
-# make menuconfig  --> help to add some latest configuration
+# vim .config      --> edit by yourself
+# make menuconfig  --> which can help to add some configuration automatically 
 ```
 
 - enable debug info option
@@ -70,8 +69,8 @@ Breakpoint 1 at 0xffffffff81f42c00
 ```
 
 - Q&A
- Maybe you'll met "gdb - Remote 'g' packet reply is too long",
- Please update gdb from source codes and comment the statments in 'gdb/remote.c' like below,
+
+Maybe you'll met "gdb - Remote 'g' packet reply is too long", Please update gdb from source codes and comment the statments in 'gdb/remote.c' like below,
 
 ```sh
  //if (buf_len > 2 * rsa->sizeof_g_packet)
