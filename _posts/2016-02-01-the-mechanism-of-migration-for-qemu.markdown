@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "The mechanism of migration in qemu!"
+title:  "The mechanism of migration in qemu"
 date:   2016-02-01 09:00:00
 categories: Virtualization
 tags: Virtualization
 ---
 ### Tech Background
 
-* [Live Migrating QEMU-KVM Virtual Machines] - This discussion will go through the simple design from the early days of live migration in the QEMU/KVM hypervisor, how it has been tweaked and optimized to where it is now, and where we’re going in the future. It will discuss how live migration actually works, the constraints within which it all has to work, and how the design keeps needing new thought to cover the latest requirements.!
+* [Live Migrating QEMU-KVM Virtual Machines] - This discussion will go through the simple design from the early days of live migration in the QEMU/KVM hypervisor, how it has been tweaked and optimized to where it is now, and where we’re going in the future. It will discuss how live migration actually works, the constraints within which it all has to work, and how the design keeps needing new thought to cover the latest requirements.
 
 ### Learning and Contribution
 
