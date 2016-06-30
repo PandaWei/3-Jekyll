@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fix kdump failure with notsc!"
+title:  "Fix capture-kernel failure with notsc!"
 date:   2016-06-29 09:00:00
 categories: Kernel
 tags: Kernel
