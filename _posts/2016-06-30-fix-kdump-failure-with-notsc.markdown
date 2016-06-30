@@ -1,21 +1,20 @@
 ---
 layout: post
-title:  "kdump failure with notsc!"
+title:  "Fix kdump failure with notsc!"
 date:   2016-06-30 09:00:00
 categories: Kernel
 tags: Kernel
 ---
 ### Kernel Bug:
 
-If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-kernel will be hang at "Calibrating delay loop...". serial console log as following,
+If specify 'notsc' for capture-kernel, and then trigger crashdown. The capture-kernel will be hang at `Calibrating delay loop...`. serial console log as following,
 
 ```sh
 ............
 [    0.000000] Linux version 4.7.0-rc2+
 (root@localhost.localdomain)
 (gcc version 4.8.2 20140120 (Red Hat 4.8.2-16) (GCC) ) #2 SMP Wed Jun 156
-[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-4.7.0-rc2+
-root=/dev/mapper/centos-root ro rd.lvm.lv=centos/swap vconsole.font=latarcyrheb-sun16 rd.lvm.lv=centos/root crashkernel=256M vconsole.keymap=us console=tty0 console=ttyS0,115200n8 LANG=en_US.UTF-8 irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off panic=10 rootflags=nofail acpi_no_memhotplug notsc
+[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-4.7.0-rc2+ root=/dev/mapper/centos-root ro rd.lvm.lv=centos/swap vconsole.font=latarcyrheb-sun16 rd.lvm.lv=centos/root crashkernel=256M vconsole.keymap=us console=tty0 console=ttyS0,115200n8 LANG=en_US.UTF-8 irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off panic=10 rootflags=nofail acpi_no_memhotplug notsc
 ............
 [    0.000000] tsc: Kernel compiled with CONFIG_X86_TSC, cannot disable TSC completely
 ............
@@ -26,6 +25,7 @@ root=/dev/mapper/centos-root ro rd.lvm.lv=centos/swap vconsole.font=latarcyrheb-
 ```
 
 Note:
+
 - This bug is found in Kernel Upstream. so we'd better to compile the latest kernel source code. You can refer to my blog "Debug kernel by qemu!" for how to compile.
 - Of course, you must enable the configuration about KDUMP before 'make -j<n>'. You can refer to [Documentation/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
 - specify 'notsc' for capture-kernel in /etc/sysconfig/kdump.
@@ -101,7 +101,7 @@ void calibrate_delay(void)
 }
 ```
 
-- Revert the 70de9a9. IMO, The flow of getting tsc_khz as following, tsc_init()->x86_platform.calibrate_tsc()->native_calibrate_tsc()->quick_pit_calibrate(). so I think tsc_khz is available to calculate lpj. But it's denied by [Denied Message](https://lkml.org/lkml/2016/6/24/237).
+- Revert the 70de9a9. IMO, The flow of getting tsc_khz as following, tsc_init()-> x86_platform.calibrate_tsc()-> native_calibrate_tsc()-> quick_pit_calibrate(). so I think tsc_khz is available to calculate lpj. But it's denied [Denied Message](https://lkml.org/lkml/2016/6/24/237).
 
 ```sh
 commit 70de9a97049e0ba79dc040868564408d5ce697f9
