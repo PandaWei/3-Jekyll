@@ -15,7 +15,6 @@ A is the source host, B is the destination host:
 
 1. Start the VM on B with the exact same parameters as the VM on A, in
    migration-listen mode:
-
 ```sh
 A# x86_64-softmmu/qemu-system-x86_64 -enable-kvm -m 1024 -smp 2 linux-0.2.img -monitor stdio
 ```
@@ -24,19 +23,19 @@ A# x86_64-softmmu/qemu-system-x86_64 -enable-kvm -m 1024 -smp 2 linux-0.2.img -m
 B# x86_64-softmmu/qemu-system-x86_64 -enable-kvm -m 1024 -smp 2 linux-0.2.img -monitor stdio -incoming tcp:0:4444 (or other PORT))
 ```
 
-2. Start the migration (always on the source host)
+1. Start the migration (always on the source host)
 
 ```sh
 A# migrate -d tcp:<B's IP>:4444 (or other PORT)
 ```
 
-3. Check the status (on A only):
+1. Check the status (on A only):
 
 ```sh
 A# (qemu) info migrate
 ```
 
-4. Check the status (on B only):
+1. Check the status (on B only):
 
 ```sh
 B# (qemu) info status
