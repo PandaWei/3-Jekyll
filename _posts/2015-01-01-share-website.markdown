@@ -11,6 +11,12 @@ tags: BestWeb
 * [kvm-virtualization-tech] - blog for book "KVM虚拟化技术：实战与原理解析"!
 * [PCIe-Arch] - blog for PCIe architectrue!
 
+
+### Tech Manual
+
+* [Intel Manuals] - Intel® 64 and IA-32 Architectures Software Developer’s Manuals
+
+
 Aphorism
 ----
 
@@ -23,3 +29,4 @@ Aphorism
 [kvm-virtualization-tech]: <http://smilejay.com>
 [PCIe-Arch]: <http://blog.sina.com.cn/s/articlelist_1685243084_3_1.html>
 
+[Intel Manuals]: <http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html>
