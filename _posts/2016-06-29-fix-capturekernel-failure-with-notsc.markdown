@@ -45,7 +45,7 @@ KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory 
 
 ### Investigation and Report:
 
-- By browsh the codes, I found that the captrue-kernel is block at calibrate_delay_converge()
+- By browsh the codes, I found that the captrue-kernel hang in calibrate_delay_converge()
 
 ```sh
 /* wait for "start of" clock tick */
@@ -138,7 +138,17 @@ can still come in and disturb the local APIC during shutdown process.
 To quiet external interrupts, disable I/O APIC before shutdown local APIC.
 ```
 
-- It doesn't make sense to me that change the order of disabling between I/O APIC and local APIC just for a certain model C2000. And I couldn't find any related descriptions for Intel 64 and IA-32 Arch. so, I send a [PATCH](https://lkml.org/lkml/2016/6/29/18) to fix it.
 
+### Solution 1st [denied]
+
+- It doesn't make sense to me that change the order of disabling between I/O APIC and local APIC just for a certain model C2000. And I couldn't find any related descriptions for Intel 64 and IA-32 Arch. so, I send a [PATCH v1](https://lkml.org/lkml/2016/6/29/18) to fix it. I got the feedback is that "By reverting the change can paper over the bug, but re-introduce the bug that can result in certain CPUs hanging if IO-APIC sends an APIC message if the lapic is disabled prematurely"
+
+### Solution 2nd [denied]
+
+- The local APIC was disabled in reboot and crash path by lapic_shutdown(), which causes no timer interrupts is passed to BSP by APIC. so the jiffies hasn't been updated. We need to put APIC in legacy mode in kexec jump path(put the system into PIT during the crash kernel),[PATCH v2](https://lkml.org/lkml/2016/7/7/362). But the guys in lkml suggests me that it should be fixed in the bootup path of the dump kernel, not the crash kernel reboot path.
+
+### Solution 3rd [discussing]
+
+- In fact, the lapic and timer are not ready when dump-capture waits them to update the jiffies value. so I suggest to put APIC in legacy mode in local_apic_timer_interrupt() temporarily, which in the bootup path of dump kernel.
 
 **Nothing seek, nothing find!**
