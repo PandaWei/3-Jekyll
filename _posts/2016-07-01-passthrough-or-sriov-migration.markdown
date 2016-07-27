@@ -5,7 +5,7 @@ date:   2016-07-01 09:00:00
 categories: Virtualization
 tags: Virtualization
 ---
-### Tech Web
+### Tech Article&Web
 
 * [PCI Passthrough -cn] - introduece device emulation and hardware(PCI) I/O virtualization, which based on Intel® (VT-d) or AMD's IOMMU
 * [PCI Passthrough -en] - introduece device emulation and hardware(PCI) I/O virtualization, which based on Intel® (VT-d) or AMD's IOMMU
@@ -24,7 +24,7 @@ tags: Virtualization
 
 ### Tech Manual
 
-* [PCI SPEC] - Intel® 64 and IA-32 Architectures Software Developer’s Manuals
+* [PCI Spec] - The PCI-sig's specifications library
 
 
 Aphorism
