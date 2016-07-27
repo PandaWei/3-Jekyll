@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Passthrough/SR-IOV devices knowledge and usage!"
+title:  "Passthrough/SR-IOV knowledge and usage!"
 date:   2016-07-01 09:00:00
 categories: Virtualization
 tags: Virtualization

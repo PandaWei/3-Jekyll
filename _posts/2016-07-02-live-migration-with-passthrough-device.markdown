@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "live migration supports passthrough device!"
+title:  "live migration supports sriov device!"
 date:   2016-07-02 09:00:00
 categories: Virtualization Kernel
 tags: Virtualization Kernel
