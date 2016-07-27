@@ -147,8 +147,12 @@ To quiet external interrupts, disable I/O APIC before shutdown local APIC.
 
 - The local APIC was disabled in reboot and crash path by lapic_shutdown(), which causes no timer interrupts is passed to BSP by APIC. so the jiffies hasn't been updated. We need to put APIC in legacy mode in kexec jump path(put the system into PIT during the crash kernel),[PATCH v2](https://lkml.org/lkml/2016/7/7/362). But the guys in lkml suggests me that it should be fixed in the bootup path of the dump kernel, not the crash kernel reboot path.
 
-### Solution 3rd [discussing]
+### Solution 3rd [denied]
 
 - In fact, the lapic and timer are not ready when dump-capture waits them to update the jiffies value. so I suggest to put APIC in legacy mode in local_apic_timer_interrupt() temporarily, which in the bootup path of dump kernel.
+
+### Solution 4th [discussing]
+
+- Generly speaking, local APIC state can be initialized by BIOS after Power-Up or Reset, which doesn't apply to kdump case. so the kernel has to be responsible for initialize the interrupt mode properly according the latest status of APIC in bootup path. We have to consider the worst case that no effective interrupt mode is set and do some proper setting. refer to [PATH v2](https://lkml.org/lkml/2016/7/25/1116) for more details.
 
 **Nothing seek, nothing find!**
