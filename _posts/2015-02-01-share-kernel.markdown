@@ -12,8 +12,15 @@ tags: BestWeb Kernel
 * [Browse  Online] - Linux内核源码在线浏览网站! 
 * [Email Archives] - Linux内核邮件列表归档服务器！
 
+### Kernel Analysis
+
+* [Linux-i386-boot] - howto for linux i386 boot 
+
+### Usage
+
 * [kernel-parameters-en] - list of the kernel parameters in English!
 * [kernel-parameters-cn] - list of the kernel parameters in Chinese!
+
 
 Aphorism
 ----
@@ -27,6 +34,8 @@ Aphorism
 [Codes Archives]: <https://www.kernel.org/>
 [Browse  Online]: <http://lxr.oss.org.cn/>
 [Email Archives]: <https://lkml.org/>
+
+[Linux-i386-boot]: <http://www.tldp.org/HOWTO/Linux-i386-Boot-Code-HOWTO/>
 
 [kernel-parameters-en]: <https://www.kernel.org/doc/Documentation/kernel-parameters.txt>
 [kernel-parameters-cn]: <http://www.jinbuguo.com/kernel/boot_parameters.html>
