@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Share Virtualization!"
+title:  "Virtualization Knowledge!"
 date:   2015-02-02 09:00:00
 categories: BestWeb Virtualization
 tags: BestWeb Virtualization
 ---
-### Hardware & Architecture
+### Virtualization
 
 * [kvm-virtualization-tech] - blog for book "KVM虚拟化技术：实战与原理解析"!
 * [x86 virtualization] - From Wikipedia
